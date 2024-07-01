@@ -1,0 +1,24 @@
+.main-div{
+    height: 100vh;
+    width: 100%;
+   background-image:url(../../assets/signinbackground.avif);
+   background-repeat: no-repeat;
+   background-size:cover ;
+   position: relative;
+
+}
+.card-main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30rem;
+    height: 30rem;
+    background-image: url(../../assets/main-box-signin.webp);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
