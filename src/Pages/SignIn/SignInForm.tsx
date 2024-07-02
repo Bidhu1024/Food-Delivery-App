@@ -2,7 +2,8 @@ import { Box, Button, Divider, Typography } from "@mui/material";
 import { useCallback, useState } from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import HttpsIcon from "@mui/icons-material/Https";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Google from "../../assets/Google";
 type EmailText = {
   value: string;
   error: boolean;
@@ -13,7 +14,7 @@ const SignInForm = () => {
     error: false,
   });
   const [password, setPassword] = useState<string>("");
-  const emailRegex = /^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
+  // const emailRegex = /^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
 
   // const debounce = (func:any,delay:number)=>{
   //     console.log("called debounce",email.value);
@@ -25,6 +26,10 @@ const SignInForm = () => {
 
   // }
 
+  const nav = useNavigate();
+  const handleRegister = () => {
+    nav("/register");
+  };
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail({
       value: e.target.value,
@@ -75,14 +80,22 @@ const SignInForm = () => {
         sx={{ width: "18rem", bgcolor: "red" }}
       />
       <Typography>
-        Don't have an account? <Link to="/signup">Click Here</Link>
+        Don't have an account? <Link to="/register">Click here..</Link>
       </Typography>
+      <Typography>
+        Or you can continue with <Link to="/register"></Link>
+        <hr />
+      </Typography>
+      <Box display="flex" alignItems={"center"}sx={{bgcolor: "#007be5",cursor:"pointer"}} padding=".25rem">
+        <Box sx={{bgcolor:"white", padding:".25rem"}}>
+          <Google />
+        </Box>
 
-      <Button
-        children={"REGISTER"}
-        variant="contained"
-        sx={{ width: "18rem", bgcolor: "red" }}
-      />
+        <Typography
+          children={"Sign in with Google"}
+          sx={{ width: "15rem",display:"flex", justifyContent:"center",fontWeight:"bold",color:"white"  }}
+        />
+      </Box>
     </Box>
   );
 };

@@ -1,0 +1,39 @@
+.main-register{
+    height:100vh;
+     width:100vw;
+    background-color:#E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-box{
+    width: 60rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+.card{
+    padding: .5rem;
+}
+.first-card{
+    border-right: 1px solid red;
+width: 50%;
+height: 100%;
+}
+.second-card{
+width: 50%;
+height: 100%;
+}
+.inside-box{
+    display: flex;
+    align-items: center;
+    gap:1rem
+}
