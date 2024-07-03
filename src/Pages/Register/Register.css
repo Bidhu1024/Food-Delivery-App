@@ -24,7 +24,6 @@
     padding: .5rem;
 }
 .first-card{
-    border-right: 1px solid red;
 width: 50%;
 height: 100%;
 }
@@ -36,4 +35,11 @@ height: 100%;
     display: flex;
     align-items: center;
     gap:1rem
+}
+.imagess{
+    width: 100%;
+    height: 20rem;
+    background-image: url(../../assets/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

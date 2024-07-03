@@ -1,9 +1,11 @@
-import { Box, Button, Stack, TextField } from "@mui/material";
+import { Box, Button, Checkbox, Stack, TextField, Typography } from "@mui/material";
 import "./Register.css";
+import KeyboardIcon from '@mui/icons-material/Keyboard';
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState } from "react";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import { Link } from "react-router-dom";
 type User = {
   value: string;
   error: boolean;
@@ -35,13 +37,14 @@ const Index = () => {
     <Box className="main-register">
       <Box className="register-box">
         <Box className="first-card card">
+            <Box sx={{display:"flex", justifyContent:"center"}}>
           <h1>Register</h1>
-
-          <Stack sx={{ mt: "2rem" }} gap={"1.5rem"}>
+</Box>
+          <Stack sx={{ mt: "1rem" }} gap={"1.5rem"}>
             <Box className="inside-box">
               <PersonIcon />
               <TextField
-                sx={{ width: "15rem" }}
+                sx={{ width: "20rem" }}
                 placeholder="Username"
                 value={userName.value}
                 error={userName.error}
@@ -74,7 +77,7 @@ const Index = () => {
                 value={email.value}
                 error={email.error}
                 helperText={email.msg}
-                sx={{ width: "15rem" }}
+                sx={{ width: "20rem" }}
                 size="small"
                 required
                 onChange={(
@@ -97,7 +100,7 @@ const Index = () => {
                 value={phone.value}
                 error={phone.error}
                 helperText={phone.msg}
-                sx={{ width: "15rem" }}
+                sx={{ width: "20rem" }}
                 size="small"
                 required
                 onChange={(
@@ -114,13 +117,13 @@ const Index = () => {
               />
             </Box>
             <Box className="inside-box">
-              <LocalPhoneIcon />
+              <KeyboardIcon />
               <TextField
                 placeholder="Password"
                 value={password.value}
                 error={password.error}
                 helperText={password.msg}
-                sx={{ width: "15rem" }}
+                sx={{ width: "20rem" }}
                 size="small"
                 required
                 onChange={(
@@ -136,11 +139,20 @@ const Index = () => {
                 }}
               />
             </Box>
-            <Box>Agreement</Box>
-            <Button>Register</Button>
+            <Box className="inside-box">
+                <Checkbox />
+                <Typography variant="body2" color="text.secondary">
+                    I agree to the <Link to="/terms">Terms of Service</Link>
+                </Typography>
+            </Box>
+            <Button variant="contained">Register</Button>
           </Stack>
         </Box>
-        <Box className="second-card card"></Box>
+        <Box className="second-card card">
+            <Box className="inside-box">
+                <Box className="imagess"></Box>
+            </Box>
+        </Box>
       </Box>
     </Box>
   );
