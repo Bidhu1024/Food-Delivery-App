@@ -108,7 +108,7 @@ const Index = () => {
                 ) => {
                   if (Number(phone.value.length) !== 0) {
                     setPhone({
-                      value: e.target.value,
+                      value: Number(e.target.value),
                       error: false,
                       msg: "",
                     });
