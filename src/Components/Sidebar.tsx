@@ -5,7 +5,8 @@ import GradeIcon from "@mui/icons-material/Grade";
 import HotelIcon from "@mui/icons-material/Hotel";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const sidebarList = [
@@ -15,11 +16,7 @@ const Sidebar = () => {
     { name: "Orders", icon: <DoneOutlineIcon />, link: "/orders" },
     { name: "Top Rated", icon: <GradeIcon />, link: "/top_rated" },
     { name: "Settings", icon: <SettingsIcon />, link: "/settings" },
-    {
-      name: "Customer Support",
-      icon: <SupportAgentIcon />,
-      link: "/customer_support",
-    },
+    { name: "Customer Support", icon: <SupportAgentIcon />, link: "/support" },
   ];
   const navigate = useNavigate();
   const handleRoutes = (item: any) => {
@@ -34,7 +31,7 @@ const Sidebar = () => {
             alignItems={"center"}
             gap="10px"
             sx={{
-              mt: "2rem",
+              mt: "2.5rem",
               ":hover": {
                 backgroundColor: "#f5f5f5",
                 cursor: "pointer",
@@ -49,6 +46,20 @@ const Sidebar = () => {
           </Stack>
         );
       })}
+      <Box
+        display={"flex"}
+        gap="10px"
+        padding={"0.4rem .6rem"}
+        sx={{
+          mt: "1rem",
+          ":hover": {
+            backgroundColor: "#f5f5f5",
+            cursor: "pointer",
+          },
+        }}
+      >
+        <LogoutIcon /> Logout
+      </Box>
     </>
   );
 };
