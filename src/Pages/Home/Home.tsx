@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Sidebar from "../../Components/Sidebar";
 
 const Home = () => {
   return (
