@@ -5,6 +5,7 @@ import Index from "./Pages/Register/Index";
 import Home from "./Pages/Home/Home";
 import Sidebar from "./Components/Sidebar";
 import { Box } from "@mui/material";
+import Resturants from "./Pages/Resturants/Resturants";
 function App() {
   return (
     <Box width="100%" display="flex" alignItems={"center"}>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Index />} />
+        <Route path="/resturants" element={<Resturants />} />
       </Routes>
     </Router>
     </Box>
