@@ -1,0 +1,10 @@
+.mainimage{
+ 
+    height:100%;
+    width:100rem;
+
+}
+.info{
+    display: flex;
+    justify-content: center;
+}

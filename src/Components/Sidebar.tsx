@@ -31,7 +31,7 @@ const Sidebar = () => {
             alignItems={"center"}
             gap="10px"
             sx={{
-              mt: "2.5rem",
+              mt: "2rem",
               ":hover": {
                 backgroundColor: "#f5f5f5",
                 cursor: "pointer",
@@ -51,7 +51,7 @@ const Sidebar = () => {
         gap="10px"
         padding={"0.4rem .6rem"}
         sx={{
-          mt: "1rem",
+          mt: "2rem",
           ":hover": {
             backgroundColor: "#f5f5f5",
             cursor: "pointer",

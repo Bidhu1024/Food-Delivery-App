@@ -8,11 +8,11 @@ const SignIn = () => {
 
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    axios.get("https://localhost:5000")
-      .then(response => setItems(response.data))
-      .catch(error => console.error(error));
-  }, []);
+  // useEffect(() => {
+  //   axios.get("https://localhost:5000")
+  //     .then(response => setItems(response.data))
+  //     .catch(error => console.error(error));
+  // }, []);
 
   console.log(items);
 
