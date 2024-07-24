@@ -5,11 +5,12 @@ import { Typography } from "@mui/material";
 interface IProps {
   Header: string;
   subtype: string;
+  src: string;
 }
-const OrderSummary: FC<IProps> = ({ Header, subtype }) => {
+const OrderSummary: FC<IProps> = ({ Header, subtype,src }) => {
   return (
-    <Stack>
-      <img src="" alt="" />
+    <Stack boxShadow={"2"} padding={".5rem"}>
+      <img src={src} alt="image not found" height={"200"} width={"200"} />
       <Typography fontWeight="bold" fontSize={"1.2rem"}>
         {Header}
       </Typography>

@@ -6,13 +6,13 @@ import Home from "./Pages/Home/Home";
 import Sidebar from "./Components/Sidebar";
 import { Box } from "@mui/material";
 import Resturants from "./Pages/Resturants/Resturants";
-import { useState } from "react";
+
 function App() {
-  const [expand,setExpand] = useState<boolean>(false);
+
   return (
     <Box width="100%" display="flex" alignItems={"center"}>
     <Router>
-      <Box width="20%" height="100vh" borderRight={"1px solid grey"}>
+      <Box width="10%" borderRight={"1px solid grey"} display={"flex"} flexDirection={"column"} justifyContent={"flex-start"} alignItems={"flex-start"}>
         <Sidebar />   
       </Box>
       <Routes>
