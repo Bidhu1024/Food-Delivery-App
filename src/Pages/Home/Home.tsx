@@ -10,7 +10,7 @@ const Home = () => {
       height={"100%"}
       display={"flex"}
       alignItems={"center"}
-      bgcolor="#eec0c8"
+   sx={{background: "linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)"}}
     >
       <Box width={"100%"}>
         <Stack width="100%" direction={"row"} padding="1rem">
